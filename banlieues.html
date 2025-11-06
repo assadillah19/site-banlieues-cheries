@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banlieues Chéries - Musée de l'immigration</title>
+    <link rel="stylesheet" href="banlieues_css.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="hours">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+            </svg>
+            <span>LE MUSÉE EST OUVERT TOUS LES JOURS DE 10H À 17H30</span>
+        </div>
+        <div class="language" onclick="toggleLanguageMenu()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            <span id="currentLanguage">FRANÇAIS</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 16px; height: 16px;">
+                <polyline points="6 9 12 15 18 9"/>
+            </svg>
+            <div class="language-dropdown" id="languageDropdown">
+                <div class="language-option selected" onclick="selectLanguage('fr', event)">
+                    <span>🇫🇷</span>
+                    <span>Français</span>
+                </div>
+                <div class="language-option" onclick="selectLanguage('en', event)">
+                    <span>🇬🇧</span>
+                    <span>English</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        <ul class="nav-links">
+            <li><a href="#accueil">ACCUEIL</a></li>
+            <li><a href="#expositions">EXPOSITIONS</a></li>
+            <li><a href="#apropos">À PROPOS</a></li>
+            <li><a href="#informations">INFORMATIONS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+        <div class="nav-icons">
+            <svg viewBox="0 0 24 24">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            </svg>
+            <svg viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="8"/>
+                <path d="m21 21-4.35-4.35"/>
+            </svg>
+            <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="1"/>
+                <circle cx="12" cy="5" r="1"/>
+                <circle cx="12" cy="19" r="1"/>
+            </svg>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <ul>
+            <li><a href="#accueil" onclick="toggleMobileMenu()">ACCUEIL</a></li>
+            <li><a href="#expositions" onclick="toggleMobileMenu()">EXPOSITIONS</a></li>
+            <li><a href="#apropos" onclick="toggleMobileMenu()">À PROPOS</a></li>
+            <li><a href="#informations" onclick="toggleMobileMenu()">INFORMATIONS</a></li>
+            <li><a href="#contact" onclick="toggleMobileMenu()">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="accueil">
+        <h1>BANLIEUES CHÉRIES</h1>
+        <h2>L'exposition qui recadre les<br>clichés.</h2>
+        <button class="cta-button">EN SAVOIR PLUS</button>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="expositions">
+        <h2>
+            <span class="black">La galerie</span>
+            <span class="red">Banlieues Chéries</span>
+        </h2>
+        <div class="underline"></div>
+        <div class="gallery-text">
+            <p>L'exposition Banlieues Chéries donne de la voix aux quartiers.<br>
+            Plongez au cœur des banlieues françaises à travers des récits, des images et des témoignages qui bousculent les idées reçues.</p>
+            <p>Banlieues Chéries vous invite à explorer les histoires de vies, la créativité et la richesse culturelle de ces territoires souvent mal connus.</p>
+            <p>On vous invite à venir ressentir, comprendre et partager ces réalités singulières.<br>
+            Une exposition immersive qui questionne, émerveille et ouvre le dialogue.</p>
+            <p>Un rendez-vous à ne pas manquer pour tous les curieux et les amoureux de la diversité !</p>
+            <p>L'exposition rassemble des centaines d'oeuvres d'art qui explore la temporalité et l'art en Banlieue :</p>
+        </div>
+        <div class="gallery-cards">
+            <div class="gallery-card">
+                <div class="gallery-card-image"></div>
+                <h3>Le Grand Paris</h3>
+            </div>
+            <div class="gallery-card">
+                <div class="gallery-card-image"></div>
+                <h3>L'art engagé en banlieue</h3>
+            </div>
+            <div class="gallery-card">
+                <div class="gallery-card-image"></div>
+                <h3>La banlieue en musique</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="apropos">
+        <h2>Témoignages</h2>
+        <div class="underline"></div>
+        <div class="testimonials-content">
+            <div class="testimonial-image"></div>
+            <div class="testimonial-text-wrapper">
+                <div class="testimonial-header">
+                    <h3>Ses visiteurs ont apprécié <span class="red">leurs visites</span> et recommandent l'exposition :</h3>
+                    <div class="testimonial-nav">
+                        <button>←</button>
+                        <button>→</button>
+                    </div>
+                </div>
+                <div class="testimonial-text">
+                    ''Banlieues Chéries, c'est l'expo' qui surprend. J'ai eu le plaisir de visiter le studio de musiques, un monument pour toute personne qui apprécie cet art. Une exposition déjà incontournable, qui représente un devoir de mémoire qui donne enfin de la voix aux banlieues en montrant ses bons côtés.''
+                </div>
+                <div class="testimonial-author">• Lucas, visiteur de l'exposition</div>
+                <div class="testimonial-indicators">
+                    <div class="indicator active"></div>
+                    <div class="indicator"></div>
+                    <div class="indicator"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="informations">
+        <h2>Services</h2>
+        <div class="underline"></div>
+        <div class="services-grid">
+            <div class="service-item">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18V5l12-2v13M9 9l12-2M9 18c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3zm12-2c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z"/>
+                    </svg>
+                </div>
+                <span class="service-name">Audioguide</span>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <path d="M21 15l-5-5L5 21"/>
+                    </svg>
+                </div>
+                <span class="service-name">Photographie</span>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <path d="m22 6-10 7L2 6"/>
+                    </svg>
+                </div>
+                <span class="service-name">Newsletter</span>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                    </svg>
+                </div>
+                <span class="service-name">Événements</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div>
+                <div class="footer-logo">BANLIEUES CHÉRIES</div>
+                <div class="footer-address">
+                    Musée de l'histoire de l'immigration<br>
+                    Palais de la Porte Dorée<br>
+                    293 avenue Daumesnil<br>
+                    75012 Paris
+                </div>
+                <div class="footer-social">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                    </svg>
+                    <svg viewBox="0 0 24 24">
+                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                    </svg>
+                    <svg viewBox="0 0 24 24">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/>
+                        <circle cx="4" cy="4" r="2"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Laissez-nous un message !</h3>
+                <form class="newsletter-form" onsubmit="return false;">
+                    <input type="email" placeholder="Entrez votre email ici" required>
+                    <button type="submit">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            2025. TOUS DROITS RÉSERVÉS.
+        </div>
+    </footer>
+
+    <script src="banlieues_js.js"></script>
+</body>
+</html>
