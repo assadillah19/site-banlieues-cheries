@@ -191,6 +191,17 @@ nav {
     color: white;
     padding: 20px;
     margin-top: 96px;
+    background-image: url("images/accueil.jpg");
+    background-size: cover;      
+    background-position: center;  
+    background-repeat: no-repeat;
+    height: 90vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;    
+    text-align: center;
 }
 
 .hero h1 {
