@@ -180,7 +180,7 @@ nav {
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23555" width="1200" height="800"/></svg>');
+    background-image: url("images/accueil.png");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -191,17 +191,6 @@ nav {
     color: white;
     padding: 20px;
     margin-top: 96px;
-    background-image: url("images/accueil.png");
-    background-size: cover;      
-    background-position: center;  
-    background-repeat: no-repeat;
-    height: 90vh; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;    
-    text-align: center;
 }
 
 .hero h1 {
