@@ -280,8 +280,9 @@ nav {
 
 .gallery-card-image {
     width: 100%;
-    aspect-ratio: 4/3;
-    background: #999;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 4/3; 
     border-radius: 20px;
     margin-bottom: 15px;
 }
@@ -316,8 +317,9 @@ nav {
 .testimonial-image {
     width: 100%;
     max-width: 500px;
+    height: 100%;
+    object-fit: cover;
     aspect-ratio: 16/10;
-    background: #666;
     border-radius: 30px;
     margin: 0 auto;
 }
